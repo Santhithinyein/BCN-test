@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+       
+        'randomProducts' => Product::inRandomOrder()->take(3)->get()
+]);
 });
+
+
+
+Route::get('/abstract', function () {
+    return view('abstract');
+});
+
+Route::get('/about',function(){
+    return view('about');
+});
+
+Route::get('/menu',function(){
+    return view('menu');
+});
+
+

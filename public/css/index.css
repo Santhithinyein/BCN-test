@@ -1,0 +1,130 @@
+.container-xxl{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/Photo/Bee3.jpg");
+    background-position:10% 40%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.row{
+    display: flex;
+    height: 88%; /*88%*/
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 50px;
+}
+.coll{
+    flex-basis: 50%;
+}
+.coll h1{
+    color:#fff;
+    font-size: 88px;
+}
+.coll p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+}
+.cardd{
+    width: 200px;
+    height:230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position:center;
+    background-size: cover;
+    transition: transform 0.5s;
+    
+}
+.card1{
+    background-image: url("/Photo/po2.jpg");
+}
+.card2{
+    background-image: url("/Photo/ho2.jpg");
+}
+.card3{
+    background-image: url("/Photo/by2.jpg");
+}
+.card4{
+    background-image: url("/Photo/ke1.jpg");
+}
+.cardd:hover{
+    transform: translateY(-10px);
+}
+.cardd h5{
+    color:#fff;
+    text-shadow: 0 0 5px #000;
+}
+.cardd p{
+    text-shadow: 0 0 5px #000;
+    font-size: 8px;
+}
+#btn1{
+    width:180px;
+    color:#000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border:0;
+    border-radius: 20px;
+    outline:none;
+    margin-top: 30px;
+}
+
+#btn1 a:visited{
+    background-color: #1877f2;
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* icon hover*/
+#target:hover {
+    transform: scale(1.5);
+}
+
+.link {
+    height: 70px;
+    width: 70px;
+    /*background-color: #caf7e3;*/
+    color:black;
+    border-radius: 35px;
+    text-align: center;
+    margin: 7px;
+    line-height: 80px;
+}
+a i {
+    transition: all 0.3s linear;
+}
+
+a:hover i {
+    transform: scale(1.5);
+}
+
+.youtube:hover {
+    color: red;
+}
+.instagram:hover {
+    color: #e11d74;
+}
+.facebook:hover {
+    color:#1877f2;
+}
+.twitter:hover {
+    color: #00adb5;
+}
+.google:hover {
+    color: #4285F4;
+}
+.arrow:hover{
+    color: #9ACD32;
+}
+.letter:hover{
+    transform: scale(1);
+    color: #9ACD32;
+}
