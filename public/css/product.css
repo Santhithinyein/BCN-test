@@ -1,0 +1,19 @@
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .lead {
+    font-size: 18px;
+    color: #6c757d;
+  }
+
+  .brand-name {
+    color: #28a745;
+  }
+
+  .bee-icon {
+    font-size: 40px;
+    color: #ffc107;
+  }

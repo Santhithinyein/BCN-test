@@ -10,16 +10,8 @@
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    
-        
-        <x-navar/>
-
-        
-    
-
-    {{$slot}}
-    
-    
+    <x-navar/>
+        {{$slot}}
     <x-footer/>
     
    
