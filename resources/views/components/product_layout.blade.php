@@ -1,4 +1,4 @@
-@props(['totalQuantity'])
+@props(['totalQuantity', 'isLoggedIn'])
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,10 +32,9 @@
                 <x-cart :totalQuantity="$totalQuantity" />
               </a>
             @else
-              <a href="/product" class="text-light btn btn-outline-warning" style="text-decoration: none;">
-                <i class="fas fa-cart-shopping"></i>
-                Cart
-              </a>
+            <a href="/product" class="text-light btn btn-outline-warning" style="text-decoration: none;" onclick="checkLogin()">
+              <i class="fas fa-cart-shopping"></i> Cart
+            </a>
             @endif
 
             @if(Auth::check())
@@ -64,5 +63,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function checkLogin(isLoggedIn) {
+       if (!isLoggedIn) {
+          alert('Please login or register to view your cart');
+       }
+    }
+ </script>
   </body>
 </html>
