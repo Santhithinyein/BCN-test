@@ -12,13 +12,10 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-  
-
     public function addToCart( Product $product){ 
         $user = Auth::user();
         $product = Product::find($product->id);
         $quantity = request('quantity');
-        
         if ($user->cart) {
             $cart = $user->cart; 
         } else {

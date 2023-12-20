@@ -16,8 +16,10 @@
            </div>
             
            <div class="mb-3 form-group">
-            @foreach ($user->cart->products as $product)
-                <input type="number" name="quantity" value="{{$product->pivot->quantity}}" min="1">
+            @foreach ($user->cart->products as $cartProduct)
+                @if ($cartProduct->id == $product->id)
+                 <input type="number" name="quantity" value="{{ $cartProduct->pivot->quantity }}" min="1">
+                @endif
             @endforeach
             @error('quantity')
                <p class="text-danger">{{$message }}</p>
