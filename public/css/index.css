@@ -1,5 +1,5 @@
 .container-xxl{
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/Photo/Bee3.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/Photo/Bee3.jpg"); 
     background-position:10% 40%;
     background-size:cover;
     background-repeat: no-repeat;
@@ -19,11 +19,11 @@
     flex-basis: 50%;
 }
 .coll h1{
-    color:#fff;
+    color:#fff; 
     font-size: 88px;
 }
 .coll p{
-    color: #fff;
+    color: #fff; 
     font-size: 11px;
     line-height: 15px;
 }
@@ -67,9 +67,9 @@
 #btn1{
     width:180px;
     color:#000;
-    font-size: 12px;
+    font-size: 18px;
     padding: 12px 0;
-    background: #fff;
+    background: #febd14;
     border:0;
     border-radius: 20px;
     outline:none;
@@ -77,9 +77,10 @@
 }
 
 #btn1 a:visited{
-    background-color: #1877f2;
+    background-color:#000;
     text-decoration: none;
     color: #000;
+    
 }
 
 
@@ -129,3 +130,17 @@ a:hover i {
     color: #9ACD32;
 }
 
+
+.nav-item a{
+    color: black;
+}
+.nav-item a:hover  {
+    color: #fff;
+}
+
+#btn1 a{
+    text-decoration: none;
+}
+.dropdown-item:hover{
+    background-color:black;
+}

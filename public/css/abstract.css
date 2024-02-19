@@ -1,0 +1,51 @@
+.content{
+    display: grid;
+    grid-template-columns:50% auto; 
+    gap: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.content .content-left{
+    display: block;
+    width: 100%;
+}
+.content .content-left .info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content-left .info p{
+    font-size: 20px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+.content .content-right{
+    display: block;
+    width: 100%;
+}
+.content .content-right img{
+    width: 500px;
+    height: auto;
+    position: relative;
+    animation: rotate 10s linear infinite;
+    background: none;
+    /*border-radius: 50%;*/
+    clip-path: circle();
+   
+}
+@keyframes rotate{
+    30%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(20deg);
+    }
+}
+
+

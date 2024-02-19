@@ -14,6 +14,6 @@
               </p>
                 </div>
                 <div class="card-footer text-bg-secondary">
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-warning">Go somewhere</a>
                 </div>
               </div>
