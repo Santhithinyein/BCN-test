@@ -1,10 +1,12 @@
-@props(['product' => null ,'categories' => null ])
+<div class="container">
 
-<form
+        @props(['product' => null ,'categories' => null ])
+
+  <form
     action="{{$product ? '/admin/products/'.$product->id.'/update' : '/admin/products/store'}}"
     method="POST"
     enctype="multipart/form-data"
->
+  >
     @csrf
     @if ($product)
     @method('PUT')
@@ -126,4 +128,5 @@
         type="submit"
         class="btn btn-primary"
     >{{ $product ? 'Update' : 'Create' }}</button>
-</form>
+  </form>
+</div>

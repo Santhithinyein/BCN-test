@@ -3,9 +3,9 @@
             <div class="coll">
             <img src="/Photo/titlelg5-removebg-preview.png" width="500px" height="200px">
                 <h1>BeesCrafter Network</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel quam voluptate 
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel quam voluptate 
                     praesentium earum! Maiores voluptatibus non perspiciatis quaerat voluptates!
-                    </p>
+                </p> -->
                     <!-- <button id="btn1"><a href="abstract">Learn More</a></button> -->
                     <a href="abstract"><button id="btn1">Learn More</button></a>
             </div>
@@ -17,10 +17,12 @@
                     <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p> -->
                 </div>
             </a>
+            <a href="#suggestion">
             <div class="cardd card2">
                     <h5>Honey</h5>
                     <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p> -->
-                </div>
+            </div>
+            </a>
 
 
                 <div class="cardd card1">

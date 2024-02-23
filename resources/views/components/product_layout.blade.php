@@ -25,6 +25,11 @@
         <div class="container">
           <img src="/Photo/titlelg5-removebg-preview.png" width="150px" height="100%">
           <div>
+              <a href="/" class="text-light btn btn-outline-warning" style="text-decoration: none;">
+                <i class="fas fa-cart-shopping"></i>
+                Home
+                
+              </a>
             @if(Auth::check())
               <a href="/view" class="text-light btn btn-outline-warning" style="text-decoration: none;">
                 <i class="fas fa-cart-shopping"></i>

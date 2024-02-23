@@ -2,18 +2,19 @@
 
 
 <div class="card h-100">
-                <img src="./Photo/ke2.jpg" class="card-img-top" alt="...">
+                <img src="" class="card-img-top" alt="...">
                 <div class="card-body text-bg-secondary">
-                  <h5 class="card-title">{{$product->pd_name}}</h5>
+                  <h5 class="card-title">{{$product->name}}</h5>
                   
                   <p class="card-text">
-                  {{$product->detail}}
+                  {{$product->description}}
                 <br>
                <b>Price - </b> {{$product->price}}
                 
               </p>
                 </div>
                 <div class="card-footer text-bg-secondary">
-                    <a href="#" class="btn btn-warning">Go somewhere</a>
+                    <a href="/product" class="btn btn-warning">Go shopping</a>
                 </div>
-              </div>
+            </div>
+            

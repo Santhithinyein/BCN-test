@@ -1,4 +1,5 @@
 <x-admin-layout>
+    <div class="container">
     <h1>Product list</h1>
     <table class="table">
         <thead>
@@ -48,5 +49,8 @@
 
         </tbody>
     </table>
+    </div>
+   
+    
     {{$products->links()}}
 </x-admin-layout>

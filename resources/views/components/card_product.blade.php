@@ -1,7 +1,7 @@
 @props(['product']);
   <div class="card">
     <img
-      src="/images/bee-product.jpg"
+      src="{{$product->image}}"
       class="card-img-top"
       alt="..."
     />
