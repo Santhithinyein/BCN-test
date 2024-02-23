@@ -17,6 +17,7 @@ class ProductSeeder extends Seeder
                     [
                     'category_id' => 1,
                     'name' => 'Sample Product 1',
+                    'slug' => 'honey',
                     'description' => 'Description for Sample Product 1',
                     'price' => 19.99,
                     'quantity' => 100,
@@ -24,6 +25,7 @@ class ProductSeeder extends Seeder
                   [
                     'category_id' => 2,
                     'name' => 'Sample Product 2',
+                    'slug' => 'honey',
                     'description' => 'Description for Sample Product 2',
                     'price' => 29.99,
                     'quantity' => 50,
@@ -31,6 +33,7 @@ class ProductSeeder extends Seeder
                   [
                     'category_id' => 3,
                     'name' => 'Sample Product 2',
+                    'slug' => 'honey',
                     'description' => 'Description for Sample Product 2',
                     'price' => 29.99,
                     'quantity' => 50,
