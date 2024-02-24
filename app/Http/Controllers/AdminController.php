@@ -13,7 +13,7 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.index', [
-            'products' => Product::with('category')->latest()->paginate(5) //15
+            'products' => Product::with('category')->latest()->paginate(10) //15
         ]);
     }
 
@@ -28,9 +28,9 @@ class AdminController extends Controller
     public function store(ProductFormRequest $request)
     {
         $cleanData = $request->validated();
-       
         // $cleanData['user_id'] = auth()->id();
-        $cleanData['image'] = '/storage/' . request('image')->store('/products');
+        $path = '/storage/'.$cleanData['image']->store('products','public');
+        $cleanData['image'] =$path;
         Product::create($cleanData);
         return redirect('/admin');
     }
@@ -48,7 +48,7 @@ class AdminController extends Controller
         
 
         if (request('image')) {
-            $cleanData['image'] = '/storage/' . request('image')->store('/products');
+            $cleanData['image'] = '/storage/'.$cleanData['image']->store('products','public');
             File::delete(public_path($product->image));
         }
 

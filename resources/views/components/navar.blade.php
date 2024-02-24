@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-gradient" style="background-color:#d2a10c;">
+<nav class="navbar sticky-top navbar-expand-lg bg-gradient" style="background-color:#d2a10c;">
             <div class="container-fluid justify-content-end">
              <!--<img src="/Photo/titlelg5-removebg-preview.png" width="150px" height="100%">-->
              <!--<a class="navbar-brand text-white" href="#">Navbar</a>-->
@@ -11,16 +11,14 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="service">Service</a>
-                  </li>
+                  
                   <li class="nav-item">
                     <a class="nav-link" href="about">About</a>
                   </li>
                   
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Menu
+                      Services
                     </a>
                     <ul class="dropdown-menu" style="background-color: #febd14;">
                       <li><a class="dropdown-item text-white" href="menu">ပျားမျိုးစိတ်များ</a></li>

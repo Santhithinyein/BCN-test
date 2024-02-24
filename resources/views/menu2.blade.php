@@ -41,5 +41,17 @@
 
 
         </p>
+        <ul class="list-group mt-3">
+            @foreach($files as $file)
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{{ route('pdf.show', ['filename' => basename($file)]) }}">
+                        <img src="{{ asset('path/to/pdf/icon.png') }}" alt="PDF Icon" width="50" height="50">
+                        {{ basename($file) }}
+                    </a>
+                    <span class="badge badge-primary badge-pill"><i class="fas fa-file-pdf"></i></span>
+                </li>
+            @endforeach
+        </ul>
     </div>
+    
 </x-layout>

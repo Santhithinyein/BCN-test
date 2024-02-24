@@ -18,7 +18,7 @@
   </head>
 
   
-  <body id="home">
+  <body id="home" style="background-color: #CDDC39;">
     <div>
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg bg-gradient" style="background-color: darkgoldenrod;">

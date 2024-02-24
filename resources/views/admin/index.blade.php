@@ -49,8 +49,8 @@
 
         </tbody>
     </table>
+    {{$products->links()}}
     </div>
    
-    
-    {{$products->links()}}
+  
 </x-admin-layout>

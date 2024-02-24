@@ -15,7 +15,7 @@ class ProductController extends Controller
         $products = Product::with('category')
                     ->search($filter)#scope query method
                     ->latest()
-                    ->paginate(3)
+                    ->paginate(6)
                     ->withQueryString();
         
          $user = Auth::user();

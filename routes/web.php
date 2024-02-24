@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\ProductController;
 use App\Http\Middleware\MustBeAdminUser;
 use Illuminate\Support\Facades\Route;
@@ -72,6 +73,12 @@ Route::middleware(MustBeAdminUser::class)->group(function () {
     Route::put('/admin/products/{product}/update', [AdminController::class, 'update']);
     Route::delete('/admin/products/{product}/destroy', [AdminController::class, 'destroy']);
 });
+
+
+
+Route::get('/pdf', [PdfController::class, 'index']);
+Route::get('/pdf/{filename}', [PdfController::class, 'show'])->name('pdf.show');
+
 
 
 

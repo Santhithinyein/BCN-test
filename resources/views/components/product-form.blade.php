@@ -1,7 +1,5 @@
 <div class="container">
-
         @props(['product' => null ,'categories' => null ])
-
   <form
     action="{{$product ? '/admin/products/'.$product->id.'/update' : '/admin/products/store'}}"
     method="POST"
