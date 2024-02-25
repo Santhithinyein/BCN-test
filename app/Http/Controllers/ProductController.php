@@ -28,11 +28,12 @@ class ProductController extends Controller
         } else {
             $totalQuantity = 0;
         }
+        $isLoggedIn = Auth::check();
        
-
         return view('products.index',[
          'products' => $products,
-         'totalQuantity' =>$totalQuantity
+         'totalQuantity' =>$totalQuantity,
+          'isLoggedIn' =>$isLoggedIn
         ]);
     }
 
