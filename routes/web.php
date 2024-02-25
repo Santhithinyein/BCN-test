@@ -39,20 +39,34 @@ Route::get('/about',function(){
     return view('about');
 });
 
-Route::get('/menu',function(){
-    return view('menu');
-});
+
 
 Route::get('/service',function(){
     return view('service');
+});
+Route::get('/menu',function(){
+    return view('menu');
 });
 
 Route::get('/menu2',function(){
     return view('menu2');
 });
+Route::get('/menu3',function(){
+    return view('menu3');
+});
+Route::get('/menu4',function(){
+    return view('menu4');
+});
+Route::get('/menu5',function(){
+    return view('menu5');
+});
 Route::get('/menu6',function(){
     return view('menu6');
 });
+Route::get('/menu7',function(){
+    return view('menu7');
+});
+
 
 Auth::routes();
 

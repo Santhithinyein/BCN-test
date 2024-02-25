@@ -16,7 +16,7 @@
     <x-navar/>
         {{$slot}}
     
-
+    <x-footer>
     
    
 
