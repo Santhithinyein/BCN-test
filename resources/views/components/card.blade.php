@@ -7,7 +7,7 @@
                     praesentium earum! Maiores voluptatibus non perspiciatis quaerat voluptates!
                 </p> -->
                     <!-- <button id="btn1"><a href="abstract">Learn More</a></button> -->
-                    <a href="abstract"><button id="btn1">Learn More</button></a>
+                    <a href="abstract"><button id="btn1" class="mb-5">Learn More</button></a>
             </div>
 
             <div class="coll">

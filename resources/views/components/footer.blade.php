@@ -27,4 +27,4 @@
            <a href="/" class="arrow"> <i class="fa-solid fa-circle-chevron-up fa-2xl"></i></a>
         </div>
 
-      </div>
+</div>

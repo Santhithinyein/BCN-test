@@ -18,44 +18,44 @@
   </head>
 
   
-  <body id="home" style="background-color: #CDDC39;">
+  <body id="home" style="background-color: #faefc0;">
     <div>
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg bg-gradient" style="background-color: darkgoldenrod;">
+      <nav class="navbar navbar-expand-lg bg-gradient" style="background-color: #f0b144;">
         <div class="container">
           <img src="/Photo/titlelg5-removebg-preview.png" width="150px" height="100%">
           <div>
-              <a href="/" class="text-light btn btn-outline-warning" style="text-decoration: none;">
+              <a href="/" class="text-light btn btn-outline-dark" style="text-decoration: none;">
                 <i class="fas fa-cart-shopping"></i>
                 Home
                 
               </a>
             @if(Auth::check())
-              <a href="/view" class="text-light btn btn-outline-warning" style="text-decoration: none;">
+              <a href="/view" class="text-light btn btn-outline-dark" style="text-decoration: none;">
                 <i class="fas fa-cart-shopping"></i>
                 Cart
                 <x-cart :totalQuantity="$totalQuantity" />
               </a>
             @else
-            <a href="/product" class="text-light btn btn-outline-warning" style="text-decoration: none;" onclick="checkLogin()">
+            <a href="/product" class="text-light btn btn-outline-dark" style="text-decoration: none;" onclick="checkLogin()">
               <i class="fas fa-cart-shopping"></i> Cart
             </a>
             @endif
 
             @if(Auth::check())
-              <a href="/home" class="text-light mx-2 btn btn-outline-warning" style="text-decoration: none;">
+              <a href="/home" class="text-light mx-2 btn btn-outline-dark" style="text-decoration: none;">
                 {{ Auth::user()->name }}
               </a>
             @else
               <!-- Adjusted the styles for the login button -->
-              <a href="/login" class="btn btn-outline-warning text-light" style="text-decoration: none;">
+              <a href="/login" class="btn btn-outline-dark text-light" style="text-decoration: none;">
                 <i class="fas fa-sign-in-alt"></i>
                 Login
               </a>
             @endif
 
             <!-- Adjusted the styles for the register button -->
-            <a href="/register" class="btn btn-outline-warning text-light" style="text-decoration: none;">
+            <a href="/register" class="btn btn-outline-dark text-light" style="text-decoration: none;">
               <i class="fas fa-user-plus"></i>
               Register
             </a>

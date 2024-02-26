@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoryFormRequest;
 use App\Http\Requests\ProductFormRequest;
 use App\Models\Category;
 use App\Models\Product;
@@ -17,11 +18,24 @@ class AdminController extends Controller
         ]);
     }
 
+    public function cat_index()
+    {
+        return view('category.index', [
+            'categories' => Category::get() //15
+        ]);
+    }
+
 
     public function create()
     {
         return view('admin.create', [
             'categories' => Category::all()
+        ]);
+    }
+    public function cat_create()
+    {
+        return view('category.create', [
+           
         ]);
     }
 
@@ -34,6 +48,14 @@ class AdminController extends Controller
         Product::create($cleanData);
         return redirect('/admin');
     }
+    public function cat_store(CategoryFormRequest $request)
+    {
+        $cleanData = $request->validated();
+        // $cleanData['user_id'] = auth()->id();
+        
+        Category::create($cleanData);
+        return redirect('/admin/categories');
+    }
 
     public function edit(Product $product)
     {
@@ -42,6 +64,13 @@ class AdminController extends Controller
             'product' => $product
         ]);
     }
+    public function cat_edit(Category $category)
+    {
+        return view('category.edit', [            
+            'category' => $category
+        ]);
+    }
+
     public function update(Product $product, ProductFormRequest $request)
     {
         $cleanData = $request->validated();
@@ -55,10 +84,26 @@ class AdminController extends Controller
         $product->update($cleanData);
         return redirect('/admin');
     }
+    public function cat_update(Category $category, CategoryFormRequest $request)
+    {
+        $cleanData = $request->validated();   
+
+        
+
+        $category->update($cleanData);
+        return redirect('/admin/categories');
+    }
+
+
 
     public function destroy(Product $product)
     {
         $product->delete();
+        return back();
+    }
+    public function cat_destroy(Category $category)
+    {
+        $category->delete();
         return back();
     }
 }

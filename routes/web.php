@@ -39,11 +39,12 @@ Route::get('/about',function(){
     return view('about');
 });
 
-
-
 Route::get('/service',function(){
     return view('service');
 });
+
+
+
 Route::get('/menu',function(){
     return view('menu');
 });
@@ -86,12 +87,22 @@ Route::middleware(MustBeAdminUser::class)->group(function () {
     Route::get('/admin/products/{product}/edit', [AdminController::class, 'edit']);
     Route::put('/admin/products/{product}/update', [AdminController::class, 'update']);
     Route::delete('/admin/products/{product}/destroy', [AdminController::class, 'destroy']);
+
+    Route::get('/admin/categories', [AdminController::class, 'cat_index']);
+    Route::get('/admin/categories/create', [AdminController::class, 'cat_create']);
+    Route::post('/admin/categories/store', [AdminController::class, 'cat_store']);
+    Route::get('/admin/categories/{category}/edit', [AdminController::class, 'cat_edit']);
+    Route::put('/admin/categories/{category}/update', [AdminController::class, 'cat_update']);
+    Route::delete('/admin/categories/{category}/destroy', [AdminController::class, 'cat_destroy']);
+    
 });
 
 
 
 Route::get('/pdf', [PdfController::class, 'index']);
 Route::get('/pdf/{filename}', [PdfController::class, 'show'])->name('pdf.show');
+
+Route::get('/orders',[OrderController::class,'orders']);
 
 
 

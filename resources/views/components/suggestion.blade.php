@@ -1,5 +1,5 @@
 @props(['randomProducts'])
-<section  id="suggestion">
+<section  id="suggestion" >
 <div class="container" >
             <h1 class="text-center pt-5">Suggestion for our products</h1>
             
@@ -11,8 +11,10 @@
             
 
             <div class="col">
+              <div class="card">
               
             <x-bee_product :product="$product"/>
+               </div>
 
 
 

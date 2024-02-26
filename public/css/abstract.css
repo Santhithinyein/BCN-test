@@ -29,7 +29,8 @@
     display: block;
     width: 100%;
 }
-.content .content-right img{
+.tt .content-right img{
+    
     width: 500px;
     height: auto;
     position: relative;
@@ -48,4 +49,15 @@
     }
 }
 
-
+.image-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    height: 350px;
+  }
+  .image-box img {
+    max-width: 100%;
+    height: 250px;
+  }
