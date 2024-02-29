@@ -64,7 +64,6 @@
                                 </div>
                             </li>
                         @endguest
-                        
                     </ul>
                 </div>
             </div>
@@ -74,5 +73,6 @@
             @yield('content')
         </main>
     </div>
+</div>
 </body>
 </html>

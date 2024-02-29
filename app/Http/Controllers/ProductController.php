@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
     function index(){
-        
         $filter =request(['search','category']);
         $products = Product::with('category')
                     ->search($filter)#scope query method

@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VoucherController;
 use App\Http\Middleware\MustBeAdminUser;
 use Illuminate\Support\Facades\Route;
 
@@ -94,6 +95,9 @@ Route::middleware(MustBeAdminUser::class)->group(function () {
     Route::get('/admin/categories/{category}/edit', [AdminController::class, 'cat_edit']);
     Route::put('/admin/categories/{category}/update', [AdminController::class, 'cat_update']);
     Route::delete('/admin/categories/{category}/destroy', [AdminController::class, 'cat_destroy']);
+
+Route::get('/admin/vouchers', [AdminController::class, 'viewVouchers'])->name('admin.vouchers');
+
     
 });
 
@@ -103,6 +107,15 @@ Route::get('/pdf', [PdfController::class, 'index']);
 Route::get('/pdf/{filename}', [PdfController::class, 'show'])->name('pdf.show');
 
 Route::get('/orders',[OrderController::class,'orders']);
+Route::delete('/orders/{order}', [OrderController::class,'destroy'])->name('orders.destroy');
+
+Route::post('/upload-voucher', [VoucherController::class, 'upload'])->name('upload.voucher');
+Route::get('/admin/vouchers', [VoucherController::class, 'index'])->name('admin.vouchers.index');
+//Route::get('/admin/vouchers/{voucher}', [VoucherController::class, 'show'])->name('admin.vouchers.show');
+//Route::get('/admin/vouchers/search', [VoucherController::class, 'search'])->name('admin.vouchers.search');
+
+
+
 
 
 

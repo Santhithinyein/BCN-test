@@ -42,21 +42,7 @@
     
 
     
-    <div class="form-group">
-        <label for="exampleInputEmail1">Category Slug</label>
-        <input
-            value="{{$category?->slug}}"
-            type="text"
-            name="slug"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter slug"
-        >
-        @error('slug')
-        <p class="text-danger">{{$message}}</p>
-        @enderror
-    </div>
+    
     
     
     

@@ -57,16 +57,25 @@
         <p>Dear {{ Auth::user()->name }},</p>
         <p>We are pleased to provide you with a brochure detailing your recent order. Please find the information below:</p>
 
-        @foreach ($user->cart->products as $product)
-            <div class="product">
-                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-                <h3>{{ $product->name }}</h3>
-                <p>{{ $product->description }}</p>
-                <p>Price: ${{ $product->price }}</p>
-                <p>Quantity: {{ $product->pivot->quantity }}</p>
-                <p>Total: ${{ $product->price * $product->pivot->quantity }}</p>
-            </div>
-        @endforeach
+        Copy code
+@php
+    $totalPrice = 0; // Initialize total price variable
+@endphp
+
+@foreach ($user->cart->products as $product)
+    <div class="product">
+        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" width="100px">
+        <h3>{{ $product->name }}</h3>
+        <p>Price: ${{ $product->price }}</p>
+        <p>Quantity: {{ $product->pivot->quantity }}</p>
+        <p>Total: {{ $product->price * $product->pivot->quantity }} MMK</p>
+        @php
+            $totalPrice += $product->price * $product->pivot->quantity; // Add product total to the overall total
+        @endphp
+    </div>
+@endforeach
+
+<p>Total amount for all products = {{ $totalPrice }} MMK</p>
 
         <hr>
         <p>If you have any questions or concerns, please contact our customer support.</p>

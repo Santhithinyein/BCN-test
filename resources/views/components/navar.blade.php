@@ -16,7 +16,7 @@
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Menu
+                      Services
                     </a>
                     <ul class="dropdown-menu" style="background-color: #febd14;">
                       <li><a class="dropdown-item"  href="menu">ပျားမျိုးစိတ်များ</a></li>
@@ -25,7 +25,7 @@
                       <li><a class="dropdown-item " href="menu4">ပျားမွေးမြူရေးပစ္စည်းကိရိယာများ</a></li>
                       <li><a class="dropdown-item" href="menu5">ပျားများ၏အသုံးဝင်မှု</a></li>
                       <li><a class="dropdown-item " href="menu6">ပျားလုပ်ငန်းဦးစီးဌာန၏အစီစဉ်များ</a></li>
-                      <li><a class="dropdown-item " href="service">လိုင်စင်လျှောက်ရန်</a></li>
+                      <li><a class="dropdown-item " href="service">လိုင်စင်သက်တမ်းတိုးရန်</a></li>
                       <li><a class="dropdown-item " href="menu7">ဌာနများ၏ဆက်သွယ်ရန်လိပ်စာ</a></li>
                       
                       

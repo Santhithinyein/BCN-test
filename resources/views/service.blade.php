@@ -1,61 +1,92 @@
 <x-layout>
-<div class="container">
-        <form action="" method="post">
-            <h1>ပုဂ္ဂလိကလျှောက်လွှာ  </h1>
-            <div class="content">
-                <div class="input-box">
-                    <label for="name">၁။ လုပ်ငန်းအမည်</label>
-                    <input type="text" placeholder="နာမည္ အ ျပည့္အစုံရိုက္ထည့္ပါ။" name="name" required>
-                </div>
-                <div class="input-box">
-                    <label for="username">၂။ ပျားမွေးမြူသူမှတ်ပုံတင် </label>
-                    <input type="text" placeholder="မွတ္ပုံတင္အ ျပည့္အစုံရိုက္ထည့္ပါ။" name="uname" required>
-                </div>
-                <div class="input-box">
-                    <label for="email"> ၃။ ဌာနမှထုတ်ပေးသည့်ရက်စွဲ</label>
-                    <input type="email" placeholder="ရက္စဲြအ ျပည့္အစုံရိုက္ထည့္ပါ။" name="email" required>
-                </div>
-                <div class="input-box">
-                    <label for="phone">၄။ ပိုင်ရှင်အဘအမည်</label>
-                    <input type="tel" placeholder="((က) အဘအမည္/(ခ)မွတ္ပုံတင္အမွတ္ )" name="phone" required>
-                </div>
-                <div class="input-box">
-                    <label for="password">၅။ နေရပ်လိပ်စာ</label>
-                    <input type="password" placeholder="လိပ္စာအ ျပည့္အစုံရိုက္ထည့္ပါ။" name="password" required>
-                </div>
-                <div class="input-box">
-                    <label for="confirm-pwd">၆။ စတင်မွေးမြူသည့်ရက်စွဲ</label>
-                    <input type="password" placeholder="ရက္စဲြ အ ျပည့္အစုံရိုက္ထည့္ပါ။" name="confirmPassword" required>
-                </div>
-                <div class="input-box">
-                    <label for="c1"> ၇။ မှတ်ပုံတင်သည့်နေ့ရှိပျားအုံအရေအတွက်စတင်မွေးမြူသည့်ပျားအုံအရေအတွက် </label>
-                    <input type="p1" placeholder="အရေအတက္ အ ျပည့္အစုံရိုက္ထည့္ပါ။" name="c1" required>
-                </div>
-                <div class="input-box">
-                    <label for="c2"> ၈။စတင္ မွေး မြူ သည့္ ပ်ားအုံ အရေ အ တွက္ </label>
-                    <input type="p2" placeholder="အရေ အ တွက္  အ ျပည့္အစုံရိုက္ထည့္ပါ။" name="c2" required>
-                </div>
-                <div class="input-box">
-                    <label for="c3"> ၉။ ပျားအုံဝယ်ယူသည့်ဌာန/ပုဂ္ဂိုလ်/မြို့/တိုင်း </label>
-                    <input type="p3" placeholder=" အ ျပည့္အစုံရိုက္ထည့္ပါ။" name="c3" required>
-                </div>
-                <div class="input-box">
-                    <label for="c4"> ၁ဝ။ လုပ်ငန်းတည်နေရာ </label>
-                    <input type="p4" placeholder="((က)ရပ္ကွက္/(ခ)‌ေရွပြ ‌ျေပာင္းမွေျမြူရာဒေသ/ (ဂ)လုပ္ငန္းသုံးယာဥ္အမီီ်ုူးအစား)" name="c4" required>
-                </div>
-                <div class="input-box">
-                    <label for="c5"> ၁၁။ 	(က) ဌာန/ပုဂ္ဂလိကနှင့် ပုဂ္ဂလိကအချင်းချင်း ပူးပေါင်းဆောင်ရွက်မှုရှိသူ</label>
-                    <input type="p5" placeholder="(က)ဌာန၊ပုဂ္ဂလိကနင့္ပုဂ္ဂလိကအခ်င္းခ်င္းပူးပေါင္းဆောင္ရွက္မူရရိသူ/((ခ)မွေးမြူအုံအရေအတွက္နင့္  ပ်ားထွက္ပစ္စည္းထုတ္လုပ္မူ ကိန္းဂဏန္းအခ်က္အလက္မ်ား  /(ဂ)G.D.P တောင္းခံမူကို ပံ့ပိုးဆောင္ရွက္သူ)" name="c5" required>
-                    
-                </div>
+    
+    <style>
+    .btn-bee {
+      background-color: #FFD700;
+      border-color: #FFD700;
+      color: #000000; /* Black text color */
+    }
+    .btn-bee:hover {
+      background-color: #FFDB58; /* Lighter shade of yellow on hover */
+      border-color: #FFDB58;
+    }
+  </style>
+
+<section class="h-200 h-custom " >
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-10">
+        <div class="card rounded-3">
+          <img src="/Photo/po1.jpg"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">ပုဂ္ဂလိကလျှောက်လွှာ</h3>
+
+            <form class="px-md-2">
+
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="လုပ်ငန်းအမည်" />
                 
-            </div>
-            <div class="alert">
-                <p>By clicking sign up,you agree to our <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a> .You may receive SMS notifications from us andcan opt out at any time.</p>
-                <div class="button-container">
-                    <button type="submit">Register</button>
-                </div>
-            </div>
-        </form>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="ပျားမွေးမြူသူမှတ်ပုံတင်" />
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="ဌာနမှထုတ်ပေးသည့်ရက်စွဲ" />
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="ပိုင်ရှင်အမည်" />
+                
+              </div>
+              
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="နေရပ်လိပ်စာ" />
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="စတင်မွေးမြူသည့်ရက်စွဲ" />
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="စတင်မွေးမြူသည့်ပျားအုံအရေအတွက်" />
+                
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control"placeholder="ပျားအုံဝယ်ယူသည့်ဌာန/ပုဂ္ဂိုလ်/မြို့/တိုင်း" />
+                
+              </div>
+              <div class="form-outline mb-4 ">
+                <input type="text" id="form3Example1q" class="form-control " placeholder="ဌာန/ပုဂ္ဂလိကနှင့် ပုဂ္ဂလိကအချင်းချင်း ပူးပေါင်းဆောင်ရွက်မှုရှိသူ" />
+                
+              </div>
+              
+
+              
+                
+              
+              
+
+              <button type="submit" class="btn btn-bee btn-lg mb-1">Submit</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+   
+
+     
+        
+        
+            
+        
+
+       
 </x-layout>

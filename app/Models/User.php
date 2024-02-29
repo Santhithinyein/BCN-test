@@ -28,5 +28,10 @@ class User extends Model  implements Authenticatable
     {
         return $this->hasMany(Order::class);
     }
+    
+    public function vouchers()
+    {
+        return $this->hasMany(Voucher::class);
+    }
 
 }

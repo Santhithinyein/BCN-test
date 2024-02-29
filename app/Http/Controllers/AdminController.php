@@ -8,6 +8,9 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+
 
 class AdminController extends Controller
 {
@@ -106,4 +109,5 @@ class AdminController extends Controller
         $category->delete();
         return back();
     }
+
 }

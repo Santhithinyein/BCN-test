@@ -72,6 +72,25 @@ class CartController extends Controller
         } 
     return redirect('/view');
    }
+
+   // Controller method to handle payment voucher upload
+public function save(Request $request)
+{
+
+    if ($request->hasFile('voucher')) {
+        $file = $request->file('voucher');
+        $fileName = $file->getClientOriginalName();
+        $file->move(public_path('/storage/voucher'), $fileName);
+
+        // You can save additional information about the file in the database if needed.
+
+        return redirect()->back()->with('success', 'File uploaded successfully.');
+    } else {
+        return redirect()->back()->with('error', 'No file uploaded.');
+    
+    }
+}
+
 }
 
 

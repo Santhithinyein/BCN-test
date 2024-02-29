@@ -3,9 +3,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mt-5">
-        <h3 class="text-center mb-5">Your Shopping Cart</h3>
-
+    <div class="container col-10">
+        <h3 class="text-center">Your Shopping Cart</h3>
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -69,10 +68,40 @@
             </div>
             
         @else
-        <div class="alert alert-warning" role="alert">
-            Your cart is empty. <br>
-            Please <a href="/product" class="alert-link" style="text-decoration:none"> add items to your cart </a> before confirming the order.
-        </div>
+            <div class="alert alert-warning" role="alert">
+                Your cart is empty. <br>
+                Please <a href="/product" class="alert-link" style="text-decoration:none"> add items to your cart </a> before confirming the order.
+            </div>
+            <div>
+                
+            <div class="mt-2">
+                    <h4>Payment Instructions</h4>
+                    <p>Please  scan the QR code for payment and send your payment voucher using the form below.</p>
+            </div>
+            <!-- Payment Voucher Form -->
+            <div class="mt-2">
+            <!-- QR Code for Payment -->
+                <div class="mt-3 py-2">
+                    <h4>Payment QR Code</h4>
+                    <img src="/Photo/code.jpg" style="width:250px; height:350px;" alt="QR Code">
+                </div>
+
+                <h4>Add Payment Voucher</h4> 
+                <form action="/upload-voucher" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="payment_voucher" class="form-label">Upload Payment Voucher</label>
+                        <input type="file" class="form-control"  name="voucher" required>
+                    </div>
+
+                    @error('voucher')
+                    <p class="text-danger">{{$message }}</p>
+                    @enderror
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            </div>
         @endif
     </div>
 @endsection
